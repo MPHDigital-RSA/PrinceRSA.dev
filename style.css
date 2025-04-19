@@ -141,8 +141,10 @@
         padding-block-start: 20px;
         padding-block-end: 20px;
         position: sticky;
-        box-shadow: 0 0 15px rgba(251, 119, 3, 0.204);
+        /* box-shadow: 0 0 15px rgba(251, 119, 3, 0.204); */
+        position: relative;
 
+        /* header logo */
         .logo {
             /* text-align: center; */
             text-decoration: none;
@@ -174,6 +176,54 @@
             z-index: -1;
         }
 
+        /* header logo ends here*/
+
+        /* navigation menu  */
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 95px;
+            background-color: black;
+            right: 0px;
+            left: 0;
+            padding: 30px;
+            grid-column: 2/-2;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(251, 119, 3, 0.514);
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        background-color: rgb(251, 119, 3);
+                        position: absolute;
+                        top: 50%;
+                        right: -20px;
+                        height: 5px;
+                        width: 5px;
+                        border-radius: 10px;
+                        transition: width 250ms ease-in-out;
+                    }
+
+                    &:hover::after {
+                        width: 15px;
+                    }
+                }
+            }
+        }
+
+        /* navigation menu  ends here*/
+
+        /* menu icon */
         .menu {
             padding: 6px;
             border-radius: 100px;
@@ -201,6 +251,9 @@
             justify-content: center;
         }
 
+        /* menu icon ends here */
+
+        /* header button */
         .button {
             grid-column: 3/-2;
             grid-row: 1;
@@ -209,6 +262,15 @@
             margin-right: 52px;
             align-self: center;
             height: fit-content;
+        }
+
+        /* header button ends here*/
+    }
+
+    header.mobile {
+
+        .nav-menu {
+            display: block;
         }
     }
 
