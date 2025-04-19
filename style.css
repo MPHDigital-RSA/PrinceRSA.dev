@@ -111,6 +111,7 @@
         align-items: center;
         gap: 5px;
         padding: 6px;
+        padding-right: 15px;
         color: black;
         text-decoration: none;
         /* font-weight: 600; */
@@ -131,6 +132,16 @@
         align-items: center;
         justify-content: center;
         rotate: 45deg;
+    }
+
+    .button.outline {
+        background-color: transparent;
+        box-shadow: none;
+        color: white;
+
+        .button-icon {
+            background-color: #fff;
+        }
     }
 }
 
@@ -346,6 +357,7 @@
 
         @media(width>=calc(1200/16*1rem)) {
             height: 100vh;
+            padding-block-start: 250px;
         }
     }
 
@@ -412,6 +424,18 @@
 
     }
 
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    a.hero__button {
+
+        .button-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
 
 
 
@@ -471,7 +495,12 @@
         gap: 5px;
 
         p {
-            display: none;
+            font-size: 12px;
+
+            /* @media(width>=calc(700/16*1rem)) {
+                flex-direction: row;
+                padding: 3px 5px;
+            } */
         }
 
         @media(width>=calc(700/16*1rem)) {
