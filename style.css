@@ -376,8 +376,8 @@
         transition: transform 500ms ease-in-out;
 
         &:hover {
-            transform: scale(1.2);
-            cursor: pointer;
+            transform: scale(1.1);
+            /* cursor: pointer; */
         }
 
     }
