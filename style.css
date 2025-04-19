@@ -417,7 +417,7 @@
 
 
         span {
-            color: #e203fbcf;
+            color: #fb7703;
             font-size: 28px;
         }
     }
@@ -454,7 +454,7 @@
 
     a.hero__button {
 
-        background-color: #e203fb;
+        background-color: #fb7703;
         color: white;
 
         .button-icon {
