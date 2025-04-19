@@ -476,32 +476,35 @@
         animation: moveTagsDowbottom 1s ease-in-out infinite alternate;
     }
 
-    .tag-5 {
-        position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 200px;
-        animation: moveTagsDowbottom 1s ease-in-out infinite alternate;
-    }
-
 }
 
-@keyframes moveTagsUp {
-    0% {
-        top: -10px;
-    }
+@layer about {
 
-    100% {
-        top: 0;
+    .about {
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
     }
 }
 
-@keyframes moveTagsDowbottom {
-    0% {
-        bottom: -10px;
+@layer animations {
+    @keyframes moveTagsUp {
+        0% {
+            top: -10px;
+        }
+
+        100% {
+            top: 0;
+        }
     }
 
-    100% {
-        bottom: 0;
+    @keyframes moveTagsDowbottom {
+        0% {
+            bottom: -10px;
+        }
+
+        100% {
+            bottom: 0;
+        }
     }
 }
