@@ -130,6 +130,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        rotate: 45deg;
     }
 }
 
@@ -152,8 +153,13 @@
             position: relative;
             display: block;
             letter-spacing: 5px;
-            line-height: 22px;
+            line-height: 24px;
             z-index: 0;
+            margin-left: 4px;
+
+            span {
+                letter-spacing: 2px;
+            }
         }
 
         .logo::after {
@@ -199,7 +205,8 @@
             grid-column: 3/-2;
             grid-row: 1;
             /* align-self: self-end; */
-            justify-self: 32px;
+            justify-self: end;
+            margin-right: 52px;
             align-self: center;
             height: fit-content;
         }
