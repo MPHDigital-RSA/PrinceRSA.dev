@@ -141,8 +141,8 @@
         background-color: black;
         padding-block-start: 20px;
         padding-block-end: 20px;
-        position: sticky;
-        /* width: 100%; */
+        position: fixed;
+        width: 100%;
         z-index: 99;
         /* box-shadow: 0 0 15px rgba(251, 119, 3, 0.204); */
         /* position: relative; */
