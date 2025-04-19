@@ -149,6 +149,23 @@
             font-weight: 700;
             grid-column: 2;
             text-transform: uppercase;
+            position: relative;
+            display: block;
+            letter-spacing: 5px;
+            line-height: 22px;
+            z-index: 0;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -4px;
+            width: 37px;
+            height: 24px;
+            border-radius: 3px;
+            background-color: rgb(251, 119, 3);
+            z-index: -1;
         }
 
         .menu {
@@ -160,6 +177,8 @@
             grid-row: 1;
             justify-self: end;
             background-color: #fff;
+            align-self: center;
+            height: fit-content;
         }
 
         .menu:hover {
@@ -181,6 +200,8 @@
             grid-row: 1;
             /* align-self: self-end; */
             justify-self: 32px;
+            align-self: center;
+            height: fit-content;
         }
     }
 
