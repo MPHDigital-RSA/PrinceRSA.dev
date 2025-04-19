@@ -1,0 +1,187 @@
+@layer fonts {
+
+    /* montserrat-regular - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: url('./fonts/montserrat-v29-latin-regular.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* montserrat-500 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        src: url('./fonts/montserrat-v29-latin-500.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* montserrat-600 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        src: url('./fonts/montserrat-v29-latin-600.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* montserrat-700 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        src: url('./fonts/montserrat-v29-latin-700.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* montserrat-800 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        src: url('./fonts/montserrat-v29-latin-800.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+}
+
+@layer global {
+
+    :root {
+        /* colors */
+
+
+        /* custom properties */
+
+    }
+
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns:
+            1fr repeat(3, calc((100% - 48px - 40px)/3)) 1fr;
+
+        @media(width >=calc(700/16*1rem)) {
+            grid-template-columns:
+                1fr repeat(6, calc((100% - 80px - 100px)/6)) 1fr;
+        }
+
+        @media(width >=calc(1200/16*1rem)) {
+            gap: 30px;
+            grid-template-columns:
+                1fr repeat(12, calc((1110px - 330px)/12)) 1fr;
+        }
+
+        /* all the components will span the 100% width */
+
+        >* {
+            grid-column: 2/-1;
+        }
+    }
+
+    .button {
+        background-color: white;
+        width: fit-content;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px;
+        color: black;
+        text-decoration: none;
+        /* font-weight: 600; */
+        padding-right: 12px;
+        box-shadow: 0 0 15px rgba(251, 119, 3, 0.811);
+    }
+
+    .button:hover {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.286);
+    }
+
+    .button-icon {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@layer header {
+
+    header {
+
+        padding-block-start: 20px;
+        padding-block-end: 20px;
+        position: sticky;
+        box-shadow: 0 0 15px rgba(251, 119, 3, 0.204);
+
+        .logo {
+            /* text-align: center; */
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            grid-column: 2;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            padding: 6px;
+            border-radius: 100px;
+            box-shadow: 0 0 15px rgba(251, 119, 3, 0.811);
+            width: fit-content;
+            grid-column: 3/-2;
+            grid-row: 1;
+            justify-self: end;
+            background-color: #fff;
+        }
+
+        .menu:hover {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.286);
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            grid-column: 3/-2;
+            grid-row: 1;
+            /* align-self: self-end; */
+            justify-self: 32px;
+        }
+    }
+
+}
