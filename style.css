@@ -434,6 +434,10 @@
         border-radius: 10px;
         gap: 5px;
 
+        p {
+            display: none;
+        }
+
         @media(width>=calc(700/16*1rem)) {
             flex-direction: row;
             padding: 3px 5px;
