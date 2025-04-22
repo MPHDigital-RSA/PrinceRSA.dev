@@ -80,6 +80,7 @@
     }
 
     .wrapper {
+
         display: grid;
         gap: 20px;
         grid-template-columns:
@@ -354,6 +355,8 @@
         align-items: center;
         position: relative;
         row-gap: 80px;
+        width: 100vw;
+        overflow: hidden;
 
         @media(width>=calc(700/16*1rem)) {
             padding-block-start: 200px;
@@ -367,6 +370,7 @@
     }
 
     .hero__image-container {
+        grid-column: 2/-2;
         grid-row: 2;
         display: flex;
         justify-content: center;
@@ -510,10 +514,14 @@
         color: #fb77031a;
         font-size: clamp(3.125rem, -0.6579rem + 17.5439vw, 12.5rem);
         position: absolute;
-        bottom: -20px;
+        bottom: -30px;
         width: 100%;
         text-align: center;
         font-weight: 900;
+
+        @media(width>=calc(700/16*1rem)) {
+            bottom: -50px;
+        }
 
         @media(width>=calc(1200/16*1rem)) {
             grid-column: 2/8;
@@ -522,7 +530,7 @@
             font-size: 68px;
             text-align: left;
             margin-top: -30px;
-            bottom: 0;
+            bottom: -30px;
         }
     }
 
@@ -588,12 +596,52 @@
 
 }
 
-@layer about {
+@layer technologies {
 
-    .about {
-        height: 100vh;
-        width: 100%;
-        background-color: #fff;
+    .technologies {
+        background-color: #fb77031a;
+        padding-block: 50px;
+    }
+
+    .technologies__heading {
+        grid-column: 2/-2;
+        color: white;
+        margin-block-end: 20px;
+    }
+
+    .technologies__flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* justify-content: center; */
+        border-left: 2px solid #fb7703;
+        padding-block: 10px;
+        padding-left: 10px;
+
+        @media(width>=calc(700/16*1rem)) {
+            flex-wrap: nowrap;
+            padding-left: 20px;
+            gap: 20px;
+        }
+    }
+
+    .technologies__technology {
+        box-shadow: 0 0 8px rgba(251, 119, 3, 0.213);
+        padding: 20px;
+        border-radius: 10px;
+        width: 45%;
+
+        @media(width>=calc(700/16*1rem)) {}
+    }
+
+    .technologies__icon {
+        width: 40px;
+        height: 40px;
+        fill: white;
+    }
+
+    .technologies__name {
+        color: white;
     }
 }
 
