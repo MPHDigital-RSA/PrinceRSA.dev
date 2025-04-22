@@ -612,11 +612,11 @@
     .technologies__flex-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 20px;
         /* justify-content: center; */
         border-left: 2px solid #fb7703;
         padding-block: 10px;
-        padding-left: 10px;
+        padding-left: 20px;
 
         @media(width>=calc(700/16*1rem)) {
             flex-wrap: nowrap;
