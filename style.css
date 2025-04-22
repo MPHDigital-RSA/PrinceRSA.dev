@@ -151,6 +151,32 @@
             background-color: #fff;
         }
     }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subheading {
+        background-color: #fb770383;
+        box-shadow: 0 0 8px #fb7703;
+        width: fit-content;
+        padding: 4px 8px;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 100px;
+
+    }
+
+    .description {
+        color: gray;
+        font-size: 14px;
+
+        @media(width>=calc(700/16*1rem)) {
+            font-size: 16px;
+        }
+    }
 }
 
 @layer header {
@@ -443,15 +469,6 @@
         }
     }
 
-    .hero__description {
-        color: gray;
-        font-size: 14px;
-
-        @media(width>=calc(700/16*1rem)) {
-            font-size: 16px;
-        }
-    }
-
     .hero__image {
         width: 300px;
         height: 300px;
@@ -602,6 +619,10 @@
     .technologies {
         background-color: #fb77031a;
         padding-block: 50px;
+
+        @media(width>=calc(1200/16*1rem)) {
+            padding-block: 100px;
+        }
     }
 
     .technologies__heading {
@@ -678,11 +699,35 @@
 }
 
 @layer story {
-    .story {}
+    .story {
+        padding-block: 50px;
+
+        @media(width>=calc(1200/16*1rem)) {
+            padding-block: 100px;
+        }
+    }
 
     .story__text {
         grid-column: 2/-2;
         grid-row: 1/2;
+
+        display: flex;
+        flex-direction: column;
+        color: white;
+        gap: 20px;
+
+        @media(width>=calc(700/16*1rem)) {
+            grid-column: 5/-2;
+            align-self: center;
+        }
+
+        @media(width>=calc(1200/16*1rem)) {
+            grid-column: 8/-3;
+        }
+    }
+
+    .story .button {
+        margin-block-start: 10px;
     }
 
     .story__image {
@@ -696,10 +741,18 @@
         box-shadow: 0 0 15px #fb7703d7;
         border-radius: 50%;
         grid-row: 2/3;
+        margin-block-start: 20px;
         /* transform: scaleX(-1); */
 
         @media(width>=calc(700/16*1rem)) {
+            margin-block-start: unset;
             transform: scaleX(-1);
+            grid-column: 2/5;
+            grid-row: 1/2;
+        }
+
+        @media(width>=calc(1200/16*1rem)) {
+            grid-column: 3/8;
         }
     }
 }
