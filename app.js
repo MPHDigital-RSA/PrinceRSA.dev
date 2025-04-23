@@ -27,6 +27,26 @@ headerbutton.addEventListener('click', () => {
 })
 
 
+// project image scroll on hover
+
+const imageWrapper = document.querySelector(".image-wrapper");
+const image = document.querySelector(".image");
+
+
+imageWrapper.addEventListener('mouseover', ()=>{
+    const imageHeight = image.offsetHeight;
+    console.log(imageHeight);
+
+    image.style.transform = `translateY(${-imageHeight / 2 + 20}px)`;
+})
+
+imageWrapper.addEventListener('mouseout', ()=>{
+     image.style.transform = `translateY(${0}px)`;
+})
+
+
+// end of project image scroll on hover
+
 
 
 // functions------------------------------------
