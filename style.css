@@ -383,18 +383,36 @@
             grid-column: 1/-1;
             height: 100vh;
 
+            ul {
+                gap: 40px;
+
+                @media(width>=calc(1200/16*1rem)) {
+                    gap: 20px;
+                }
+            }
+
             li {
                 a {
                     display: block;
                     width: inherit;
                     transition: color .5s ease-in-out;
+
+                    padding: 10px;
+
+                    @media(width>=calc(1200/16*1rem)) {
+                        padding: 0px;
+                    }
                 }
 
                 a:hover {
                     color: #fb7703;
+                    background-color: #fb770315;
+                    border-radius: 5px;
 
                     @media(width>=calc(1200/16*1rem)) {
                         color: white;
+                        background-color: transparent;
+                        border-radius: 0;
                     }
                 }
             }
