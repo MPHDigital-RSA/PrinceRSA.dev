@@ -813,9 +813,12 @@
     }
 
     .projects-container {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         gap: 20px;
+
+        @media(width >=calc(700/16*1rem)) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     .project {
@@ -830,7 +833,7 @@
         transition: background-color .5s;
 
         @media(width >=calc(700/16*1rem)) {
-            max-width: 350px;
+            /* max-width: 350px; */
         }
     }
 

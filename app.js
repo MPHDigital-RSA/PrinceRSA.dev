@@ -30,8 +30,6 @@ headerbutton.addEventListener('click', () => {
 // project image scroll on hover
 
 const imageWrapper = document.querySelectorAll(".image-wrapper");
-// const image = document.querySelectorAll(".image");
-
 
 imageWrapper.forEach( (item) => {
     item.addEventListener('mouseover', () => {
