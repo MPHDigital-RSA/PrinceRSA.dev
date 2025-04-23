@@ -910,6 +910,26 @@
     .project-buttons svg {
         width: 20px;
     }
+
+
+    /* trying the scrolling on hover effect */
+
+    .image-wrapper {
+        background-color: red;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    img.image {
+        border-radius: unset;
+        height: auto;
+        /* transform: translateY(-135px); */
+        transition: transform 3s ease;
+    }
+
+    .image-wrapper:hover img.image {
+        transform: translateY(-135px);
+    }
 }
 
 
