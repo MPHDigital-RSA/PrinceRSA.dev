@@ -29,20 +29,36 @@ headerbutton.addEventListener('click', () => {
 
 // project image scroll on hover
 
-const imageWrapper = document.querySelector(".image-wrapper");
-const image = document.querySelector(".image");
+const imageWrapper = document.querySelectorAll(".image-wrapper");
+// const image = document.querySelectorAll(".image");
 
 
-imageWrapper.addEventListener('mouseover', ()=>{
-    const imageHeight = image.offsetHeight;
-    console.log(imageHeight);
-
-    image.style.transform = `translateY(${-imageHeight / 2 + 20}px)`;
+imageWrapper.forEach( (item) => {
+    item.addEventListener('mouseover', () => {
+        const image = item.children[0];
+        const imageHeight = image.offsetHeight;
+        image.style.transform = `translateY(${-imageHeight / 2 + 20}px)`;
+    })
 })
 
-imageWrapper.addEventListener('mouseout', ()=>{
-     image.style.transform = `translateY(${0}px)`;
+imageWrapper.forEach( (item) => {
+    item.addEventListener('mouseout', () => {
+        const image = item.children[0];
+        image.style.transform = `translateY(0px)`;
+    })
 })
+
+
+// imageWrapper.addEventListener('mouseover', ()=>{
+//     const imageHeight = image.offsetHeight;
+//     console.log(imageHeight);
+
+//     image.style.transform = `translateY(${-imageHeight / 2 + 20}px)`;
+// })
+
+// imageWrapper.addEventListener('mouseout', ()=>{
+//      image.style.transform = `translateY(${0}px)`;
+// })
 
 
 // end of project image scroll on hover
