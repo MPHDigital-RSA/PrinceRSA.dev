@@ -810,6 +810,10 @@
     .projects {
         background-color: #fb77031a;
         padding-block: 50px;
+
+        @media(width >=calc(1200/16*1rem)) {
+            padding-block: 100px;
+        }
     }
 
     .projects-container {
