@@ -915,9 +915,10 @@
     /* trying the scrolling on hover effect */
 
     .image-wrapper {
-        background-color: red;
+        /* background-color: red; */
         height: 100px;
         overflow: hidden;
+        border-radius: 10px;
     }
 
     img.image {
