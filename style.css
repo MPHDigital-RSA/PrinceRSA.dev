@@ -1042,7 +1042,7 @@
         .form-flex {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            column-gap: 20px;
         }
 
         .form-group {
