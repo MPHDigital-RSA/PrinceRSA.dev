@@ -54,21 +54,23 @@ imageWrapper.forEach( (item) => {
     })
 })
 
+// form validation
+const submit = document.querySelector("#submit");
+const nameInput = document.querySelector("#name");
+const warning = document.querySelector(".warning");
 
-// imageWrapper.addEventListener('mouseover', ()=>{
-//     const imageHeight = image.offsetHeight;
-//     console.log(imageHeight);
+submit.addEventListener("click", (e) =>{
+    e.preventDefault();
+    const value = nameInput.value;
+    
+    if(value === ""){
+        warning.innerHTML = "Enter your name";
+        return
+    }
 
-//     image.style.transform = `translateY(${-imageHeight / 2 + 20}px)`;
-// })
-
-// imageWrapper.addEventListener('mouseout', ()=>{
-//      image.style.transform = `translateY(${0}px)`;
-// })
-
-
-// end of project image scroll on hover
-
+    warning.innerHTML = "";
+    nameInput.value = "";
+})
 
 
 // functions------------------------------------
